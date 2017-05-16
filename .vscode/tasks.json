@@ -8,23 +8,32 @@
 
 // A task runner that calls a custom npm script that compiles the extension.
 {
-    "version": "0.1.0",
+    "version": "2.0.0",
     "isShellCommand": true,
     "showOutput": "always",
     "tasks": [
         {
-            "taskName": "fetch",
-            "command": "./fetch.sh"
+            "taskName": "fetch-npm",
+            "command": "npm",
+            "args": ["install"]
+        },
+        {
+            "taskName": "fetch-dotnet",
+            "command": "dotnet",
+            "dependsOn": "fetch-npm",
+            "args": ["restore", "-v", "d"]
         },
         {
             "taskName": "build",
             "command": "dotnet",
+            "dependsOn": "fetch-dotnet",
             "args": ["fable", "npm-run", "build"],
             "isBuildCommand": true
         },
         {
             "taskName": "clean",
-            "command": "./clean.sh"
+            "command": "npm",
+            "args": ["run", "clean"]
         }
     ]
 }

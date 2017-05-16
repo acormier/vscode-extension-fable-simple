@@ -6,4 +6,4 @@
 4. Launch Visual Studio Code: `code .`
 4. In vscode press F5 to get dependencies, build, and launch.
 
-Look at ./.vscode/tasks.json to understand what's going on.
+Only tested on the mac.  Look at ./.vscode/tasks.json to understand what's going on.

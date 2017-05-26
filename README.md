@@ -1,6 +1,6 @@
 ## Build and running the app
 
-1. Make sure nodejs and the .Net SDK are installed and on your path
+1. Make sure nodejs, the .Net SDK, and yarn are installed and on your path
 2. clone the git repo: `git clone https://github.com/acormier/vscode-extension-fable-simple.git`
 3. Switch to directory: `cd vscode-extension-fable-simple`
 4. Launch Visual Studio Code: `code .`

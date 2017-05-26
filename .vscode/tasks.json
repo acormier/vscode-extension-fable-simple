@@ -14,7 +14,7 @@
     "tasks": [
         {
             "taskName": "fetch-npm",
-            "command": "npm",
+            "command": "yarn",
             "args": ["install"]
         },
         {
